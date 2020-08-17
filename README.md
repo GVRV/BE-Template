@@ -10,28 +10,29 @@ This full-stack exercise involves building a form component in React that also m
 
   
 
-# The Task
+## ProfileThe Task
 
 The task is to build a little express app that will server API's to a frontend.
 
 
 
-# Data Models
+## Data Models
 
 > **All models are defined in src/model.js**
 
-## Profile
-A profile can be either a client or a contractor. 
+### Profile
+A profile can be either a `client` or a `contractor`. 
 clients create contracts with contractors. contractor do jobs for clients and get paid.
-each profile haves a balance property.
+Each profile haves a balance property.
 
-## Contract
+### Contract
 A contract between and client and a contractor.
 Contracts have 3 statuses, `new`, `in_progress`, `terminated`. contracts are considered active only when in status `in_progress`
-Contracts entities groups jobs under them.
+Contracts groups jobs under them.
 
-## Job
+### Job
 contractor get paid for jobs by clients under a certain contract.
+
 ## Getting Set Up
 
   
@@ -60,7 +61,7 @@ The exercise requires [Node.js](https://nodejs.org/en/) to be installed. We reco
   
   
 
-# Technical Notes
+## Technical Notes
 
   
 
@@ -68,12 +69,12 @@ The exercise requires [Node.js](https://nodejs.org/en/) to be installed. We reco
 
 - The database provider is SQLite, which will store data in a file local to your repository called `database.sqlite3`. The ORM [Sequelize](http://docs.sequelizejs.com/) is on top of it. You should only have to interact with Sequelize - **please spend some time reading sequelize documentation before starting the exercise.**
 
-- To authenticate users use the `getProfile` middleware that is located under src/middleware/getProfile.js. users are authenticated by passing `profile_id` in the request header. after a user is authenticated his profile will be available under `req.profile`.
+- To authenticate users use the `getProfile` middleware that is located under src/middleware/getProfile.js. users are authenticated by passing `profile_id` in the request header. after a user is authenticated his profile will be available under `req.profile`. make sure only users that are on the contract can access their contracts.
 - The server is running on port 3001.
 
   
 
-# API's To Implement
+## API's To Implement
 
   
 
@@ -117,13 +118,13 @@ Below is a list of the required API's for the application.
 
   
 
-# Going Above and Beyond the Requirements
+## Going Above and Beyond the Requirements
 
 Given the time expectations of this exercise, we don't expect anyone to submit anything super fancy, but if you find yourself with extra time, any extra credit item(s) that showcase your unique strengths would be awesome! 🙌
 
   
 
-# Submitting the Assignment
+## Submitting the Assignment
 
 When you have finished the assignment, create a github repository and send us the link.
 
