@@ -2,7 +2,7 @@
 
   
 
-💫 Welcome to the backend task! 🎉
+💫 Welcome! 🎉
 
   
 
@@ -10,9 +10,9 @@ This full-stack exercise involves building a form component in React that also m
 
   
 
-## ProfileThe Task
+## About the Task
 
-The task is to build a little express app that will server API's to a frontend.
+The task is to build a little express app that will serve APIs to a frontend.
 
 
 
@@ -22,13 +22,13 @@ The task is to build a little express app that will server API's to a frontend.
 
 ### Profile
 A profile can be either a `client` or a `contractor`. 
-clients create contracts with contractors. contractor do jobs for clients and get paid.
-Each profile haves a balance property.
+clients create contracts with contractors. contractor does jobs for clients and get paid.
+Each profile has a balance property.
 
 ### Contract
 A contract between and client and a contractor.
 Contracts have 3 statuses, `new`, `in_progress`, `terminated`. contracts are considered active only when in status `in_progress`
-Contracts groups jobs under them.
+Contracts group jobs within them.
 
 ### Job
 contractor get paid for jobs by clients under a certain contract.
@@ -74,7 +74,7 @@ The exercise requires [Node.js](https://nodejs.org/en/) to be installed. We reco
 
   
 
-## API's To Implement
+## APIs To Implement
 
   
 
