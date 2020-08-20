@@ -4,17 +4,8 @@
 
 💫 Welcome! 🎉
 
-  
 
-This full-stack exercise involves building a form component in React that also makes a request to the Node.js/Express.js src. We imagine you should spend around 2.5 hours at implement this feature.
-
-  
-
-## About the Task
-
-The task is to build a little express app that will serve APIs to a frontend.
-
-
+This backebd excersice involves building a Node.js/Express.js app that will serve a REST API. We imagine you should spend around 2.5 hours at implement this feature.
 
 ## Data Models
 
@@ -74,7 +65,7 @@ The exercise requires [Node.js](https://nodejs.org/en/) to be installed. We reco
 
   
 
-## APIs To Implement
+## APIs To Implement 
 
   
 
