@@ -12,6 +12,7 @@ describe("Get Contracts API", () => {
         expect(res.statusCode).toEqual(200);
         expect(res.body.length).toEqual(1);
         expect(res.body[0].id).toEqual(2);
+        expect(res.body[0].status).not.toEqual("terminated");
     });
 
     it("should return non-terminated contracts if authenticated user is a contractor", async () => {
@@ -22,5 +23,9 @@ describe("Get Contracts API", () => {
         const res2 = await request(app).get("/contracts").set("profile_id", "6");
         expect(res2.statusCode).toEqual(200);
         expect(res2.body.length).toEqual(3);
+
+        for (contract of res2.body) {
+            expect(contract.status).not.toEqual("terminated");
+        }
     });
 });
