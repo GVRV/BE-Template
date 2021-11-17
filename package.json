@@ -10,14 +10,25 @@
   },
   "scripts": {
     "start": "nodemon ./src/server.js",
-    "seed": "node ./scripts/seedDb.js"
+    "seed": "node ./scripts/seedDb.js",
+    "seed:test": "NODE_ENV=test node ./scripts/seedDb.js",
+    "test": "NODE_ENV=test jest"
   },
   "devDependencies": {
     "concurrently": "4.1.0",
-    "nodemon": "1.19.1"
+    "jest": "^27.3.1",
+    "nodemon": "1.19.1",
+    "prettier": "2.4.1",
+    "supertest": "^6.1.6"
   },
   "engines": {
     "node": ">=10.16.3"
   },
-  "engineStrict": true
+  "engineStrict": true,
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
 }
