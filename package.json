@@ -12,7 +12,8 @@
     "start": "nodemon ./src/server.js",
     "seed": "node ./scripts/seedDb.js",
     "seed:test": "NODE_ENV=test node ./scripts/seedDb.js",
-    "test": "NODE_ENV=test jest"
+    "test": "NODE_ENV=test jest",
+    "format": "npx prettier --write ."
   },
   "devDependencies": {
     "concurrently": "4.1.0",
