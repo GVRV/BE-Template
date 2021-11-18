@@ -1,11 +1,10 @@
 const { Op } = require("sequelize");
-const contract = require("./contract");
 
 module.exports = {
   getUnpaidJobs: async (req, res) => {
     const { Contract, Job } = req.app.get("models");
 
-    const unpaid_jobs = await Job.findAll({
+    const unpaidJobs = await Job.findAll({
       where: {
         paid: {
           // FIXME: Why is sequelizing seeding with null values?
@@ -30,7 +29,7 @@ module.exports = {
       ],
     });
 
-    res.json(unpaid_jobs);
+    res.json(unpaidJobs);
   },
   jobPayment: async (req, res) => {
     const { Profile, Contract, Job } = req.app.get("models");

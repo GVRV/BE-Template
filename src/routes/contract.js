@@ -22,7 +22,7 @@ module.exports = {
   getAllContracts: async (req, res) => {
     const { Contract } = req.app.get("models");
 
-    const active_contracts = await Contract.findAll({
+    const activeContracts = await Contract.findAll({
       where: {
         status: {
           // FIXME: This cannot be the best way to reference
@@ -36,6 +36,6 @@ module.exports = {
       },
     });
 
-    res.json(active_contracts);
+    res.json(activeContracts);
   },
 };
