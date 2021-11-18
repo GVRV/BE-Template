@@ -7,8 +7,8 @@ app.use(bodyParser.json());
 app.set("sequelize", sequelize);
 app.set("models", sequelize.models);
 
-const { getContract, getAllContracts } = require('./routes/contract');
-const { getUnpaidJobs } = require('./routes/job');
+const { getContract, getAllContracts } = require("./routes/contract");
+const { getUnpaidJobs, jobPayment } = require("./routes/job");
 
 /**
  * Contract Routes
@@ -17,8 +17,9 @@ app.get("/contracts/:id", getProfile, getContract);
 app.get("/contracts", getProfile, getAllContracts);
 
 /**
-  * Job Routes
-  */
+ * Job Routes
+ */
 app.get("/jobs/unpaid", getProfile, getUnpaidJobs);
+app.post("/jobs/:jobId/pay", getProfile, jobPayment);
 
 module.exports = app;
