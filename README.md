@@ -1,3 +1,14 @@
+# DEEL BACKEND SUBMISSION
+
+- You can run the integration tests using `npm run seed:test && npm run test`
+- You can run the formatter using `npm run format`
+
+Other thoughts:
+
+- The spec is ambiguous in places and I have tried to adhere to it as much as possible, improvising otherwise.
+- There other quick wins that can be added to this codebase like adding an OpenAPI specification for this API and auto-generating documentation which I have not attempted due to lack of time.
+
+
 # DEEL BACKEND TASK
 
 💫 Welcome! 🎉
