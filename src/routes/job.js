@@ -74,9 +74,7 @@ module.exports = {
               // status "terminated" without hard-coding the string
               [Op.ne]: Contract.rawAttributes.status.values[2],
             },
-            [Op.or]: {
-              ClientId: client.id,
-            },
+            ClientId: client.id,
           },
         },
       ],

@@ -11,6 +11,7 @@ app.set("models", sequelize.models);
 const { getContract, getAllContracts } = require("./routes/contract");
 const { getUnpaidJobs, jobPayment } = require("./routes/job");
 const { clientDeposit } = require("./routes/deposit");
+const { bestProfessionals, bestClients } = require("./routes/admin");
 
 /**
  * Contract Routes
@@ -28,5 +29,11 @@ app.post("/jobs/:jobId/pay", getProfile, jobPayment);
  * Deposit Routes
  */
 app.post("/deposit/balances/:userId", clientDeposit);
+
+/**
+ * Admin Routes
+ */
+app.get("/admin/best-profession", bestProfessionals);
+app.get("/admin/best-clients", bestClients);
 
 module.exports = app;
